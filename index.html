@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why You Should Learn AI: A Presentation by Kunal Rai</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="antialiased">
+    <!-- Mobile Menu Button -->
+    <button id="mobile-menu-btn" class="md:hidden fixed top-4 right-4 z-50 bg-slate-800/90 backdrop-blur-md text-white p-3 rounded-lg border border-amber-500/30 hover:bg-amber-500/20 transition-all duration-300">
+        <i class="fas fa-bars text-lg"></i>
+    </button>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="md:hidden fixed inset-0 z-40 bg-slate-900/95 backdrop-blur-lg transform translate-x-full transition-transform duration-300">
+        <nav class="flex flex-col items-center justify-center h-full space-y-8 text-xl">
+            <a href="#home" class="mobile-nav-link text-slate-300 hover:text-amber-400 transition-colors duration-300">Home</a>
+            <a href="#intro" class="mobile-nav-link text-slate-300 hover:text-amber-400 transition-colors duration-300">About Me</a>
+            <a href="#why-ai" class="mobile-nav-link text-slate-300 hover:text-amber-400 transition-colors duration-300">Why AI?</a>
+            <a href="#challenge" class="mobile-nav-link text-slate-300 hover:text-amber-400 transition-colors duration-300">The Challenge</a>
+            <a href="#career" class="mobile-nav-link text-slate-300 hover:text-amber-400 transition-colors duration-300">Careers</a>
+            <a href="#interest-form" class="mobile-nav-link text-slate-300 hover:text-amber-400 transition-colors duration-300">Join Us</a>
+            <a href="#contact" class="mobile-nav-link text-slate-300 hover:text-amber-400 transition-colors duration-300">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Enhanced Header -->
+    <header class="fixed top-0 left-0 right-0 z-30 bg-slate-900/80 backdrop-blur-xl border-b border-slate-700/50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold gradient-text flex items-center">
+                <i class="fas fa-robot mr-2"></i>
+                AI for India's Future
+            </h1>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link text-slate-300 hover:text-amber-400 transition-all duration-300 relative">Home</a>
+                <a href="#intro" class="nav-link text-slate-300 hover:text-amber-400 transition-all duration-300 relative">About Me</a>
+                <a href="#why-ai" class="nav-link text-slate-300 hover:text-amber-400 transition-all duration-300 relative">Why AI?</a>
+                <a href="#challenge" class="nav-link text-slate-300 hover:text-amber-400 transition-all duration-300 relative">The Challenge</a>
+                <a href="#career" class="nav-link text-slate-300 hover:text-amber-400 transition-all duration-300 relative">Careers</a>
+                <a href="#interest-form" class="nav-link bg-amber-500 hover:bg-amber-600 text-slate-900 px-4 py-2 rounded-lg font-semibold transition-all duration-300">Join Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Enhanced Hero Section -->
+    <section id="home" class="min-h-screen flex flex-col items-center justify-center text-center hero-bg-image px-4 relative overflow-hidden">
+        <!-- Animated Background Elements -->
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+        
+        <div class="max-w-5xl mx-auto relative z-10">
+            <div class="hero-badge mb-6">
+                <span class="bg-amber-500/20 text-amber-400 px-4 py-2 rounded-full text-sm font-semibold border border-amber-500/30">
+                    🚀 Transform Your Career with AI
+                </span>
+            </div>
+            
+            <h2 class="text-4xl md:text-7xl font-black tracking-tight uppercase text-white leading-tight">
+                Unlock Your Future with 
+                <span class="gradient-text block mt-2">Artificial Intelligence</span>
+            </h2>
+            
+            <p class="mt-6 text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+                A new, secure, and exciting career path for India's graduates. Discover the opportunities that await beyond traditional roles.
+            </p>
+            
+            <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#intro" class="cta-button bg-amber-500 hover:bg-amber-600 text-slate-900 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-amber-500/25">
+                    <i class="fas fa-play mr-2"></i>
+                    Start Learning Now
+                </a>
+                <a href="#interest-form" class="cta-button-secondary border-2 border-white/30 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300">
+                    <i class="fas fa-users mr-2"></i>
+                    Join Our Community
+                </a>
+            </div>
+        </div>
+        
+        <!-- Enhanced Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2">
+            <div class="scroll-indicator">
+                <div class="scroll-text text-white/70 text-sm mb-2">Scroll to explore</div>
+                <a href="#intro" class="scroll-down-arrow text-white hover:text-amber-400 transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <!-- Enhanced About Section -->
+        <section id="intro" class="min-h-screen flex items-center justify-center content-bg px-4 py-20">
+            <div class="container mx-auto">
+                <div class="flex flex-col lg:flex-row items-center gap-16">
+                    <div class="lg:w-2/5 text-center lg:text-left">
+                        <div class="profile-image-container">
+                            <img src="https://media.licdn.com/dms/image/v2/D5622AQHzXBAFL-F1JA/feedshare-shrink_1280/feedshare-shrink_1280/0/1720897968303?e=1758758400&v=beta&t=GDqq50eEUnNfBUgQRkvK5GrdJEVmDxpoVWjPZCfSNUE" 
+                                 alt="Kunal Rai" 
+                                 class="profile-image w-80 h-80 object-cover rounded-3xl mx-auto border-4 border-amber-500 shadow-2xl transform transition-transform duration-500 hover:scale-105">
+                            <div class="profile-badge absolute -bottom-4 left-1/2 transform -translate-x-1/2 bg-amber-500 text-slate-900 px-4 py-2 rounded-full font-bold text-sm">
+                                <i class="fas fa-star mr-1"></i>
+                                AI Expert
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:w-3/5">
+                        <div class="section-badge mb-4">
+                            <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-sm font-semibold">
+                                👋 Meet Your Guide
+                            </span>
+                        </div>
+                        
+                        <h3 class="text-3xl md:text-5xl font-bold leading-tight">
+                            Your Guide to the <span class="gradient-text">AI Revolution</span>
+                        </h3>
+                        
+                        <div class="mt-6">
+                            <p class="text-2xl font-semibold text-white">Kunal Rai</p>
+                            <p class="text-amber-400 text-lg font-medium">Senior Data Scientist & Career Mentor</p>
+                        </div>
+                        
+                        <div class="mt-8 space-y-6">
+                            <div class="feature-point glass-card p-4 rounded-xl">
+                                <div class="flex items-start">
+                                    <span class="text-2xl mr-4 mt-1">🎯</span>
+                                    <div>
+                                        <strong class="text-white text-lg">My Mission:</strong>
+                                        <p class="text-slate-300 mt-1">To show you how AI can transform your career prospects from uncertain to unstoppable.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-point glass-card p-4 rounded-xl">
+                                <div class="flex items-start">
+                                    <span class="text-2xl mr-4 mt-1">💡</span>
+                                    <div>
+                                        <strong class="text-white text-lg">Why I'm Here:</strong>
+                                        <p class="text-slate-300 mt-1">I've witnessed brilliant students waste years on unpredictable exams while AI creates millions of opportunities.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="feature-point glass-card p-4 rounded-xl">
+                                <div class="flex items-start">
+                                    <span class="text-2xl mr-4 mt-1">🚀</span>
+                                    <div>
+                                        <strong class="text-white text-lg">What We'll Do:</strong>
+                                        <p class="text-slate-300 mt-1">I'll demonstrate practical AI tools you can use TODAY to supercharge your studies and career.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enhanced Why AI Section -->
+        <section id="why-ai" class="py-20 md:py-32 section-glow relative">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-4xl mx-auto">
+                    <div class="section-badge mb-6">
+                        <span class="bg-purple-500/20 text-purple-400 px-4 py-2 rounded-full text-sm font-semibold">
+                            ⚡ The Power of AI
+                        </span>
+                    </div>
+                    
+                    <h3 class="text-3xl md:text-5xl font-bold leading-tight">
+                        Why AI? <span class="gradient-text">Your Degree's Superpower</span>
+                    </h3>
+                    
+                    <p class="mt-6 text-slate-400 text-lg leading-relaxed">
+                        Your B.Com, B.Sc, BA, or PhD is a powerful degree in your domain. Think of AI not as a replacement, but as a turbocharger that enhances everything you've learned.
+                    </p>
+                </div>
+
+                <div class="mt-16 grid md:grid-cols-3 gap-8">
+                    <div class="step-card text-center group">
+                        <div class="step-number">1</div>
+                        <div class="step-icon">
+                            <i class="fas fa-graduation-cap text-3xl text-amber-400"></i>
+                        </div>
+                        <h4 class="mt-6 text-xl font-bold text-white">Your Core Degree</h4>
+                        <p class="mt-3 text-slate-400 leading-relaxed">
+                            This is your foundation. You are an expert in commerce, science, arts, or research. This knowledge is invaluable.
+                        </p>
+                    </div>
+                    
+                    <div class="step-card text-center group">
+                        <div class="step-number">2</div>
+                        <div class="step-icon">
+                            <i class="fas fa-code text-3xl text-amber-400"></i>
+                        </div>
+                        <h4 class="mt-6 text-xl font-bold text-white">Add AI & Coding</h4>
+                        <p class="mt-3 text-slate-400 leading-relaxed">
+                            Learning AI tools and basic Python gives you the ability to analyze, automate, and create in ways you never thought possible within your field.
+                        </p>
+                    </div>
+                    
+                    <div class="step-card text-center group">
+                        <div class="step-number">3</div>
+                        <div class="step-icon">
+                            <i class="fas fa-rocket text-3xl text-amber-400"></i>
+                        </div>
+                        <h4 class="mt-6 text-xl font-bold text-white">Become Future-Proof</h4>
+                        <p class="mt-3 text-slate-400 leading-relaxed">
+                            You become a specialist with a tech edge. A B.Com graduate who can automate financial reports, or a BA who can analyze social trends with code.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mt-20 max-w-4xl mx-auto">
+                    <div class="highlight-card glass-card p-8 md:p-12 rounded-3xl text-center">
+                        <div class="highlight-icon mb-6">
+                            <i class="fas fa-shield-alt text-4xl text-green-400"></i>
+                        </div>
+                        <h4 class="text-2xl md:text-3xl font-bold text-white mb-6">A No-Loss Proposition</h4>
+                        <p class="text-slate-300 text-lg leading-relaxed">
+                            The path to a government job is challenging due to limited seats. Adding AI to your skillset is preparing for the future, no matter where you work. Give it a try. At best, you learn a transformative new skill. At worst, you lose nothing.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enhanced Challenge Section -->
+        <section id="challenge" class="py-20 md:py-32 bg-slate-900/50 section-glow relative">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-4xl mx-auto">
+                    <div class="section-badge mb-6">
+                        <span class="bg-red-500/20 text-red-400 px-4 py-2 rounded-full text-sm font-semibold">
+                            ⚠️ Reality Check
+                        </span>
+                    </div>
+                    
+                    <h3 class="text-3xl md:text-5xl font-bold leading-tight">
+                        The Uttarakhand Challenge: <span class="gradient-text">Why a Plan B is Crucial</span>
+                    </h3>
+                    
+                    <p class="mt-6 text-slate-400 text-lg leading-relaxed">
+                        Relying solely on government exams can be a risky strategy. In recent years, Uttarakhand has faced significant challenges with its recruitment processes, affecting lakhs of dedicated students.
+                    </p>
+                </div>
+
+                <div class="mt-16 grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="challenge-content">
+                        <h4 class="text-2xl font-bold text-white mb-6">A Pattern of Disruption</h4>
+                        <p class="text-slate-400 text-lg mb-6 leading-relaxed">
+                            Major recruitment drives have been plagued by paper leaks and irregularities, leading to widespread cancellations and investigations. This isn't a rare event; it's a recurring problem.
+                        </p>
+                        
+                        <div class="space-y-4">
+                            <div class="challenge-item glass-card p-4 rounded-xl">
+                                <div class="flex items-start">
+                                    <i class="fas fa-times-circle text-red-400 mt-1 mr-3"></i>
+                                    <div>
+                                        <span class="font-semibold text-white">Graduate Level Exam (2021):</span>
+                                        <span class="text-slate-300"> Cancelled due to irregularities.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="challenge-item glass-card p-4 rounded-xl">
+                                <div class="flex items-start">
+                                    <i class="fas fa-times-circle text-red-400 mt-1 mr-3"></i>
+                                    <div>
+                                        <span class="font-semibold text-white">Forest Guard & Secretariat Guard (2021):</span>
+                                        <span class="text-slate-300"> Both exams cancelled.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="challenge-item glass-card p-4 rounded-xl">
+                                <div class="flex items-start">
+                                    <i class="fas fa-times-circle text-red-400 mt-1 mr-3"></i>
+                                    <div>
+                                        <span class="font-semibold text-white">VDO Recruitment Scam (2016):</span>
+                                        <span class="text-slate-300"> A major scandal that required years of investigation.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="challenge-item glass-card p-4 rounded-xl">
+                                <div class="flex items-start">
+                                    <i class="fas fa-exclamation-triangle text-yellow-400 mt-1 mr-3"></i>
+                                    <div>
+                                        <span class="font-semibold text-white">Multiple Other Exams:</span>
+                                        <span class="text-slate-300"> At least 8 major exams cancelled, impacting over 1.5 lakh aspirants.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="newspaper-container">
+                        <div class="newspaper-clip">
+                            <img src="https://i.postimg.cc/k478KgQF/newspaper.png" 
+                                 alt="Newspaper clipping about exam cancellation" 
+                                 class="w-full h-auto" 
+                                 onerror="this.onerror=null;this.src='https://placehold.co/600x400/f3e2d1/2d2a26?text=EXAM+CANCELLED';">
+                            <p class="text-sm mt-3 font-serif text-gray-700">
+                                A familiar headline for many students. Protests erupted after the announcement, with aspirants demanding accountability.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-24 grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="newspaper-container lg:order-2">
+                        <div class="newspaper-clip">
+                            <img src="https://i.postimg.cc/V6H6vfDN/The-Dehradun-police-said_the_protesting_youngsters-1675957960800.jpg" 
+                                 alt="Newspaper clipping about student protests" 
+                                 class="w-full h-auto" 
+                                 onerror="this.onerror=null;this.src='https://placehold.co/600x400/f3e2d1/2d2a26?text=PROTESTS+ERUPT';">
+                            <p class="text-sm mt-3 font-serif text-gray-700">
+                                "We spend years preparing, only for our efforts to go to waste," said one student. The frustration is palpable across the state.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="challenge-content lg:order-1">
+                        <h4 class="text-2xl font-bold text-white mb-6">The Human Cost of Uncertainty</h4>
+                        <p class="text-slate-400 text-lg mb-6 leading-relaxed">
+                            Behind the headlines are the stories of students like you. The real impact is measured in:
+                        </p>
+                        
+                        <div class="space-y-4">
+                            <div class="impact-item glass-card p-4 rounded-xl">
+                                <div class="flex items-start">
+                                    <i class="fas fa-clock text-red-400 mt-1 mr-3"></i>
+                                    <div>
+                                        <span class="font-semibold text-white">Wasted Years:</span>
+                                        <span class="text-slate-300"> Precious time spent preparing for exams that get cancelled.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="impact-item glass-card p-4 rounded-xl">
+                                <div class="flex items-start">
+                                    <i class="fas fa-money-bill-wave text-red-400 mt-1 mr-3"></i>
+                                    <div>
+                                        <span class="font-semibold text-white">Financial Strain:</span>
+                                        <span class="text-slate-300"> Money spent on coaching, books, and living expenses.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="impact-item glass-card p-4 rounded-xl">
+                                <div class="flex items-start">
+                                    <i class="fas fa-heart-broken text-red-400 mt-1 mr-3"></i>
+                                    <div>
+                                        <span class="font-semibold text-white">Mental Anguish:</span>
+                                        <span class="text-slate-300"> The stress, anxiety, and loss of faith in the system.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="impact-item glass-card p-4 rounded-xl">
+                                <div class="flex items-start">
+                                    <i class="fas fa-pause-circle text-red-400 mt-1 mr-3"></i>
+                                    <div>
+                                        <span class="font-semibold text-white">Career Paralysis:</span>
+                                        <span class="text-slate-300"> Being stuck in a cycle of exams with no guaranteed outcome.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-24 text-center max-w-4xl mx-auto">
+                    <div class="solution-card glass-card p-8 md:p-12 rounded-3xl">
+                        <div class="solution-icon mb-6">
+                            <i class="fas fa-lightbulb text-4xl text-amber-400"></i>
+                        </div>
+                        <h4 class="text-2xl md:text-3xl font-bold text-white mb-6">The AI Advantage: A Secure Path Forward</h4>
+                        <p class="text-slate-300 text-lg leading-relaxed">
+                            You cannot control the system, but you can control your skills. Learning AI and coding offers a direct path to a rewarding career that is based on what you know, not on the outcome of a single exam. It's a career path you own.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enhanced Career Section -->
+        <section id="career" class="py-20 md:py-32 section-glow relative">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-4xl mx-auto">
+                    <div class="section-badge mb-6">
+                        <span class="bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-semibold">
+                            💼 Career Opportunities
+                        </span>
+                    </div>
+                    
+                    <h3 class="text-3xl md:text-5xl font-bold leading-tight">
+                        Launch a <span class="gradient-text">Career in AI</span>
+                    </h3>
+                    
+                    <p class="mt-6 text-slate-400 text-lg leading-relaxed">
+                        The world of AI is booming with high-demand, high-paying roles. Your degree, combined with these skills, makes you a top candidate.
+                    </p>
+                </div>
+
+                <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="career-card glass-card p-8 rounded-2xl text-center group hover:scale-105 transition-all duration-300">
+                        <div class="career-icon mb-6">
+                            <i class="fas fa-chart-bar text-4xl text-blue-400"></i>
+                        </div>
+                        <h4 class="font-bold text-xl text-white mb-4">Data Analyst</h4>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                            Find insights and trends in data to help businesses make smarter decisions. The starting point for many great data careers.
+                        </p>
+                        <div class="salary-range bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-xs font-semibold">
+                            ₹4-8 LPA
+                        </div>
+                    </div>
+
+                    <div class="career-card glass-card p-8 rounded-2xl text-center group hover:scale-105 transition-all duration-300">
+                        <div class="career-icon mb-6">
+                            <i class="fas fa-brain text-4xl text-purple-400"></i>
+                        </div>
+                        <h4 class="font-bold text-xl text-white mb-4">Data Scientist</h4>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                            Use advanced techniques and machine learning to build predictive models and solve complex problems.
+                        </p>
+                        <div class="salary-range bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-xs font-semibold">
+                            ₹8-15 LPA
+                        </div>
+                    </div>
+
+                    <div class="career-card glass-card p-8 rounded-2xl text-center group hover:scale-105 transition-all duration-300">
+                        <div class="career-icon mb-6">
+                            <i class="fas fa-cogs text-4xl text-orange-400"></i>
+                        </div>
+                        <h4 class="font-bold text-xl text-white mb-4">MLOps Engineer</h4>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                            Build and manage the systems that run AI models in the real world. A crucial and high-demand technical role.
+                        </p>
+                        <div class="salary-range bg-orange-500/20 text-orange-400 px-3 py-1 rounded-full text-xs font-semibold">
+                            ₹10-20 LPA
+                        </div>
+                    </div>
+
+                    <div class="career-card glass-card p-8 rounded-2xl text-center group hover:scale-105 transition-all duration-300">
+                        <div class="career-icon mb-6">
+                            <i class="fas fa-building text-4xl text-green-400"></i>
+                        </div>
+                        <h4 class="font-bold text-xl text-white mb-4">Corporate AI Specialist</h4>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                            Apply AI skills in finance, marketing, or operations to improve efficiency and drive growth in any top company.
+                        </p>
+                        <div class="salary-range bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-xs font-semibold">
+                            ₹6-12 LPA
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-16 text-center">
+                    <a href="#interest-form" class="inline-flex items-center bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-slate-900 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-amber-500/25">
+                        <i class="fas fa-rocket mr-2"></i>
+                        Start Your AI Journey Today
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW: Student Interest Form Section -->
+        <section id="interest-form" class="py-20 md:py-32 bg-slate-900/50 section-glow relative">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-4xl mx-auto mb-16">
+                    <div class="section-badge mb-6">
+                        <span class="bg-amber-500/20 text-amber-400 px-4 py-2 rounded-full text-sm font-semibold">
+                            🎓 Join Our Community
+                        </span>
+                    </div>
+                    
+                    <h3 class="text-3xl md:text-5xl font-bold leading-tight">
+                        Ready to <span class="gradient-text">Transform Your Future?</span>
+                    </h3>
+                    
+                    <p class="mt-6 text-slate-400 text-lg leading-relaxed">
+                        Take the first step towards an exciting AI career. Fill out the form below and we'll guide you on your journey to success.
+                    </p>
+                </div>
+
+                <div class="max-w-2xl mx-auto">
+                    <form id="studentForm" class="glass-card p-8 md:p-12 rounded-3xl">
+                        <div class="space-y-6">
+                            <!-- Name Field -->
+                            <div class="form-group">
+                                <label for="studentName" class="block text-white font-semibold mb-2">
+                                    <i class="fas fa-user mr-2 text-amber-400"></i>
+                                    Full Name *
+                                </label>
+                                <input type="text" 
+                                       id="studentName" 
+                                       name="name" 
+                                       required 
+                                       class="form-input w-full px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-xl text-white placeholder-slate-400 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition-all duration-300"
+                                       placeholder="Enter your full name">
+                            </div>
+
+                            <!-- Phone Field -->
+                            <div class="form-group">
+                                <label for="studentPhone" class="block text-white font-semibold mb-2">
+                                    <i class="fas fa-phone mr-2 text-amber-400"></i>
+                                    Phone Number *
+                                </label>
+                                <input type="tel" 
+                                       id="studentPhone" 
+                                       name="phone" 
+                                       required 
+                                       pattern="[0-9]{10}"
+                                       class="form-input w-full px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-xl text-white placeholder-slate-400 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition-all duration-300"
+                                       placeholder="10-digit mobile number">
+                            </div>
+
+                            <!-- Current Degree Field -->
+                            <div class="form-group">
+                                <label for="currentDegree" class="block text-white font-semibold mb-2">
+                                    <i class="fas fa-graduation-cap mr-2 text-amber-400"></i>
+                                    Current Degree/Education *
+                                </label>
+                                <select id="currentDegree" 
+                                        name="degree" 
+                                        required 
+                                        class="form-input w-full px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-xl text-white focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition-all duration-300">
+                                    <option value="">Select your degree</option>
+                                    <option value="B.Com">B.Com (Bachelor of Commerce)</option>
+                                    <option value="B.Sc">B.Sc (Bachelor of Science)</option>
+                                    <option value="BA">BA (Bachelor of Arts)</option>
+                                    <option value="BBA">BBA (Bachelor of Business Administration)</option>
+                                    <option value="M.Com">M.Com (Master of Commerce)</option>
+                                    <option value="M.Sc">M.Sc (Master of Science)</option>
+                                    <option value="MA">MA (Master of Arts)</option>
+                                    <option value="MBA">MBA (Master of Business Administration)</option>
+                                    <option value="PhD">PhD (Doctor of Philosophy)</option>
+                                    <option value="12th">12th Grade/Intermediate</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+
+                            <!-- Interest Areas -->
+                            <div class="form-group">
+                                <label class="block text-white font-semibold mb-3">
+                                    <i class="fas fa-heart mr-2 text-amber-400"></i>
+                                    Areas of Interest (Select all that apply) *
+                                </label>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                    <label class="interest-checkbox flex items-center p-3 bg-slate-800/30 rounded-lg cursor-pointer hover:bg-slate-700/50 transition-all duration-300">
+                                        <input type="checkbox" name="interests" value="Data Analysis" class="sr-only">
+                                        <div class="checkbox-custom mr-3"></div>
+                                        <span class="text-slate-300">📊 Data Analysis</span>
+                                    </label>
+                                    
+                                    <label class="interest-checkbox flex items-center p-3 bg-slate-800/30 rounded-lg cursor-pointer hover:bg-slate-700/50 transition-all duration-300">
+                                        <input type="checkbox" name="interests" value="Machine Learning" class="sr-only">
+                                        <div class="checkbox-custom mr-3"></div>
+                                        <span class="text-slate-300">🤖 Machine Learning</span>
+                                    </label>
+                                    
+                                    <label class="interest-checkbox flex items-center p-3 bg-slate-800/30 rounded-lg cursor-pointer hover:bg-slate-700/50 transition-all duration-300">
+                                        <input type="checkbox" name="interests" value="Python Programming" class="sr-only">
+                                        <div class="checkbox-custom mr-3"></div>
+                                        <span class="text-slate-300">🐍 Python Programming</span>
+                                    </label>
+                                    
+                                    <label class="interest-checkbox flex items-center p-3 bg-slate-800/30 rounded-lg cursor-pointer hover:bg-slate-700/50 transition-all duration-300">
+                                        <input type="checkbox" name="interests" value="Business Analytics" class="sr-only">
+                                        <div class="checkbox-custom mr-3"></div>
+                                        <span class="text-slate-300">📈 Business Analytics</span>
+                                    </label>
+                                    
+                                    <label class="interest-checkbox flex items-center p-3 bg-slate-800/30 rounded-lg cursor-pointer hover:bg-slate-700/50 transition-all duration-300">
+                                        <input type="checkbox" name="interests" value="AI Tools" class="sr-only">
+                                        <div class="checkbox-custom mr-3"></div>
+                                        <span class="text-slate-300">🛠️ AI Tools</span>
+                                    </label>
+                                    
+                                    <label class="interest-checkbox flex items-center p-3 bg-slate-800/30 rounded-lg cursor-pointer hover:bg-slate-700/50 transition-all duration-300">
+                                        <input type="checkbox" name="interests" value="Career Transition" class="sr-only">
+                                        <div class="checkbox-custom mr-3"></div>
+                                        <span class="text-slate-300">🚀 Career Transition</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Experience Level -->
+                            <div class="form-group">
+                                <label for="experience" class="block text-white font-semibold mb-2">
+                                    <i class="fas fa-star mr-2 text-amber-400"></i>
+                                    Current Experience with AI/Programming
+                                </label>
+                                <select id="experience" 
+                                        name="experience" 
+                                        class="form-input w-full px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-xl text-white focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition-all duration-300">
+                                    <option value="Complete Beginner">Complete Beginner</option>
+                                    <option value="Some Basic Knowledge">Some Basic Knowledge</option>
+                                    <option value="Intermediate">Intermediate</option>
+                                    <option value="Advanced">Advanced</option>
+                                </select>
+                            </div>
+
+                            <!-- Additional Message -->
+                            <div class="form-group">
+                                <label for="message" class="block text-white font-semibold mb-2">
+                                    <i class="fas fa-comment mr-2 text-amber-400"></i>
+                                    Additional Message (Optional)
+                                </label>
+                                <textarea id="message" 
+                                          name="message" 
+                                          rows="4" 
+                                          class="form-input w-full px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-xl text-white placeholder-slate-400 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition-all duration-300 resize-none"
+                                          placeholder="Tell us about your goals, questions, or anything else you'd like us to know..."></textarea>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="text-center pt-4">
+                                <button type="submit" 
+                                        class="submit-btn bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-slate-900 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-amber-500/25 w-full sm:w-auto">
+                                    <i class="fas fa-paper-plane mr-2"></i>
+                                    Join the AI Revolution
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Success Message -->
+                    <div id="successMessage" class="hidden mt-8 p-6 bg-green-500/20 border border-green-500/30 rounded-xl text-center">
+                        <i class="fas fa-check-circle text-green-400 text-3xl mb-4"></i>
+                        <h4 class="text-xl font-bold text-green-400 mb-2">Thank You!</h4>
+                        <p class="text-slate-300">Your information has been submitted successfully. We'll contact you soon with details about starting your AI journey!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enhanced Contact Section -->
+        <section id="contact" class="py-20 md:py-32 section-glow relative">
+            <div class="container mx-auto px-6 text-center">
+                <div class="max-w-4xl mx-auto">
+                    <div class="section-badge mb-6">
+                        <span class="bg-blue-500/20 text-blue-400 px-4 py-2 rounded-full text-sm font-semibold">
+                            📞 Get In Touch
+                        </span>
+                    </div>
+                    
+                    <div class="contact-card glass-card p-8 md:p-12 rounded-3xl">
+                        <h4 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                            Let's Learn AI, <span class="gradient-text">Right Here in Lohaghat!</span>
+                        </h4>
+                        
+                        <p class="text-slate-300 text-lg leading-relaxed mb-8">
+                            Whether you are a BA, B.Com, B.Sc, or PhD student... if you are preparing for a government job or a private one... the future is calling. Let's answer it together. The journey to mastering AI starts now.
+                        </p>
+                        
+                        <div class="contact-info space-y-4 mb-8">
+                            <div class="flex items-center justify-center text-slate-300">
+                                <i class="fas fa-envelope text-amber-400 mr-3"></i>
+                                <span>Get in touch for guidance:</span>
+                            </div>
+                            <a href="mailto:kunal.rai25@rla.du.ac.in" 
+                               class="inline-flex items-center text-amber-400 hover:text-amber-300 transition-colors duration-300 text-xl font-semibold">
+                                <i class="fas fa-paper-plane mr-2"></i>
+                                kunal.rai25@rla.du.ac.in
+                            </a>
+                        </div>
+                        
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                            <a href="#interest-form" 
+                               class="inline-flex items-center bg-amber-500 hover:bg-amber-600 text-slate-900 px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+                                <i class="fas fa-user-plus mr-2"></i>
+                                Join Our Program
+                            </a>
+                            <a href="https://chat.whatsapp.com/LcPQ6oNndC2FfvGHZlJKl9?mode=ems_share_t" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               class="inline-flex items-center bg-[#25D366] hover:bg-[#128C7E] text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+                                <i class="fab fa-whatsapp mr-2"></i>
+                                Join WhatsApp Group
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Enhanced Footer -->
+    <footer class="bg-slate-900 border-t border-slate-700 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
+                <div>
+                    <h5 class="text-xl font-bold gradient-text mb-4">AI for India's Future</h5>
+                    <p class="text-slate-400">Empowering students with AI skills for a brighter tomorrow.</p>
+                </div>
+                <div>
+                    <h6 class="font-semibold text-white mb-4">Quick Links</h6>
+                    <ul class="space-y-2 text-slate-400">
+                        <li><a href="#intro" class="hover:text-amber-400 transition-colors">About</a></li>
+                        <li><a href="#career" class="hover:text-amber-400 transition-colors">Careers</a></li>
+                        <li><a href="#interest-form" class="hover:text-amber-400 transition-colors">Join Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h6 class="font-semibold text-white mb-4">Connect</h6>
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <a href="mailto:kunal.rai25@rla.du.ac.in" class="text-slate-400 hover:text-amber-400 transition-colors">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </a>
+                        <a href="https://chat.whatsapp.com/LcPQ6oNndC2FfvGHZlJKl9?mode=ems_share_t" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="text-slate-400 hover:text-[#25D366] transition-colors">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-slate-700 mt-8 pt-8 text-center text-slate-500">
+                <p>&copy; 2025 AI Awareness Initiative. Designed to inspire the next generation of innovators.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Enhanced Floating WhatsApp Button -->
+    <a href="https://chat.whatsapp.com/LcPQ6oNndC2FfvGHZlJKl9?mode=ems_share_t"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="whatsapp-float fixed bottom-8 right-8 z-50 bg-[#25D366] hover:bg-[#128C7E] text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 transform hover:scale-110 print:hidden"
+       aria-label="Join our WhatsApp group">
+        <i class="fab fa-whatsapp text-2xl"></i>
+        <div class="whatsapp-ping"></div>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" 
+            class="fixed bottom-8 left-8 z-50 bg-slate-800/90 hover:bg-amber-500 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 transform translate-y-16 opacity-0">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
